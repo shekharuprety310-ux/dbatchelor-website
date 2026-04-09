@@ -57,6 +57,59 @@ img[style*="height:"] {
   img[style*="height:250px"] { height: 180px !important; }
   img[style*="height:200px"] { height: 150px !important; }
   img[style*="height:180px"] { height: 140px !important; }
+  
+  /* Force all images to fit screen */
+  img {
+    max-width: 100vw !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  /* Fix any element with fixed width */
+  * {
+    max-width: 100vw !important;
+    box-sizing: border-box;
+  }
+  
+  /* Fix containers */
+  .container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  /* Fix padding on sections */
+  .section {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    overflow-x: hidden;
+  }
+  
+  /* Fix page hero */
+  .page-hero {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Fix cards and grids */
+  .service-card,
+  .event-type-card,
+  .testimonial-card,
+  .gallery-item,
+  .faq-item,
+  .booking-card {
+    max-width: 100vw !important;
+    overflow-x: hidden;
+  }
+  
+  /* Fix tables */
+  table {
+    font-size: 0.85rem !important;
+  }
+  
+  /* Fix any fixed widths in elements */
+  [style*="width:"] {
+    max-width: 100vw !important;
+  }
 }
 
 a, button {
