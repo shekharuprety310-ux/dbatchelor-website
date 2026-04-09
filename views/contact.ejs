@@ -1,0 +1,261 @@
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><span>Contact</span></div>
+      <h1 class="text-gradient">Get In Touch</h1>
+      <p style="color:var(--text-secondary); max-width:600px; margin: 1rem auto 0; font-size:1.1rem;">
+        Ready to book or have a question? We'd love to hear from you.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info reveal-left">
+        <h3 style="font-size:1.5rem; margin-bottom:1.5rem;">Contact Details</h3>
+
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <label>Phone</label>
+            <a href="tel:0467764778">0467 764 778</a>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <label>Email</label>
+            <a href="mailto:cassandra@batchelorenterprises.com">cassandra@batchelorenterprises.com</a>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <label>Address</label>
+            <span>Unit 14, 1583 Nubeena Road<br>Nubeena TAS 7184</span>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fas fa-mail-bulk"></i></div>
+          <div>
+            <label>Postal</label>
+            <span>PO Box 140, Nubeena TAS 7184</span>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fas fa-briefcase"></i></div>
+          <div>
+            <label>ABN</label>
+            <span>61 924 754 338</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <h4 style="margin-bottom:1rem; font-family: var(--font-heading); text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); font-size:0.85rem;">Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Batchelorenterprisestasptyltd/" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/dbatchelorenterprises/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@batchelorenterprises" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+
+        <div class="payment-methods mt-4">
+          <h4>Payment Methods</h4>
+          <div class="payment-grid">
+            <span><i class="fas fa-university"></i> Bank Transfer</span>
+            <span><i class="fas fa-mobile-alt"></i> PayID: 0467 764 778</span>
+            <span><i class="fas fa-money-bill"></i> Cash</span>
+            <span><i class="fas fa-credit-card"></i> Card Payments</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper reveal-right">
+        <h3 style="font-size:1.5rem; margin-bottom:1.5rem;">Send Us a Message</h3>
+
+        <% if (success) { %>
+          <div class="alert alert-success"><i class="fas fa-check-circle"></i> <%= success %></div>
+        <% } %>
+
+        <% if (errors && errors.length > 0) { %>
+          <div class="alert alert-error">
+            <% errors.forEach(e => { %><div><i class="fas fa-exclamation-circle"></i> <%= e.msg %></div><% }) %>
+          </div>
+        <% } %>
+
+        <form action="/contact" method="POST" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name *</label>
+              <input type="text" name="name" class="form-control" placeholder="John Smith" required value="<%= (typeof formData !== 'undefined' && formData.name) ? formData.name : '' %>">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" name="phone" class="form-control" placeholder="0400 000 000" value="<%= (typeof formData !== 'undefined' && formData.phone) ? formData.phone : '' %>">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address *</label>
+            <input type="email" name="email" class="form-control" placeholder="your@email.com" required value="<%= (typeof formData !== 'undefined' && formData.email) ? formData.email : '' %>">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Service Required *</label>
+            <select name="service" class="form-control" required>
+              <option value="">— Select a service —</option>
+              <option value="dj-hire">Mobile DJ Hire</option>
+              <option value="mc-services">MC Services</option>
+              <option value="audio-hire">Audio & Sound Hire</option>
+              <option value="lighting">Lighting Effects</option>
+              <option value="party-hire">Party Equipment Hire</option>
+              <option value="event-management">Event Management</option>
+              <option value="full-package">Full Package (DJ + Audio + Lighting)</option>
+              <option value="other">Other / General Enquiry</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Event Date</label>
+              <input type="date" name="eventDate" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Event Location</label>
+              <input type="text" name="location" class="form-control" placeholder="Venue / Suburb">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Your Message *</label>
+            <textarea name="message" class="form-control" placeholder="Tell us about your event..." required><%= (typeof formData !== 'undefined' && formData.message) ? formData.message : '' %></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-pulse" style="width:100%; justify-content:center;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<style>
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-info-card:last-of-type { border-bottom: none; }
+
+.ci-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(10,125,232,0.12);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-info-card label {
+  display: block;
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.contact-info-card a,
+.contact-info-card span {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  display: block;
+}
+
+.contact-info-card a:hover { color: var(--accent); }
+
+.payment-methods h4 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.payment-grid span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(10,125,232,0.08);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+}
+
+.payment-grid i { color: var(--primary); }
+
+.contact-form-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>

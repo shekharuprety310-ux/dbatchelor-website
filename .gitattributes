@@ -1,0 +1,21 @@
+* text=auto
+*.css text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ejs text eol=lf
+*.txt text eol=lf
+
+# Images and video - let Git LFS handle these if needed
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+*.mov binary
+*.docx binary
+
+# Don't diff large media
+public/media/** binary
+public/images/** binary
+logos/** binary

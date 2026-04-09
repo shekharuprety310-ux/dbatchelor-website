@@ -1,0 +1,234 @@
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><span>Downloads</span></div>
+      <h1 class="text-gradient">Client Forms & Agreements</h1>
+      <p style="color:var(--text-secondary); max-width:600px; margin: 1rem auto 0; font-size:1.1rem;">
+        Download our client agreement forms before your booking
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Downloads Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag"><i class="fas fa-file-download"></i> Downloads</span>
+      <h2 class="section-title">Client <span class="highlight">Agreement Forms</span></h2>
+      <p class="section-subtitle">Please download, complete and return the relevant agreement form before your event. This helps us ensure a smooth booking process.</p>
+    </div>
+
+    <div class="downloads-grid stagger">
+      <div class="download-card">
+        <div class="download-icon">
+          <i class="fas fa-music"></i>
+        </div>
+        <div class="download-content">
+          <h3>Mobile DJ Hire Agreement</h3>
+          <p>Required for all DJ hire bookings. Includes terms of service, equipment details, payment terms and event requirements.</p>
+          <ul class="download-features">
+            <li><i class="fas fa-check"></i> Equipment list included</li>
+            <li><i class="fas fa-check"></i> Payment terms</li>
+            <li><i class="fas fa-check"></i> Cancellation policy</li>
+          </ul>
+          <a href="/media/downloads/D Batchelor Enterprises mobile DJ  HIRE AGREEMENT.docx" download class="btn btn-primary">
+            <i class="fas fa-download"></i> Download DJ Agreement
+          </a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <div class="download-icon">
+          <i class="fas fa-glass-cheers"></i>
+        </div>
+        <div class="download-content">
+          <h3>Party Equipment Hire Agreement</h3>
+          <p>Required for party equipment hire bookings. Includes equipment inventory, hire conditions, damage policy and return requirements.</p>
+          <ul class="download-features">
+            <li><i class="fas fa-check"></i> Full equipment inventory</li>
+            <li><i class="fas fa-check"></i> Hire conditions</li>
+            <li><i class="fas fa-check"></i> Damage policy</li>
+          </ul>
+          <a href="/media/downloads/D Batchelor Enterprises PARTY HIRE AGREEMENT.docx" download class="btn btn-primary">
+            <i class="fas fa-download"></i> Download Party Hire Agreement
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Important Notes -->
+    <div class="download-notes reveal mt-4">
+      <div class="notes-card">
+        <h3><i class="fas fa-info-circle"></i> Important Information</h3>
+        <ul>
+          <li>Please complete and sign the relevant agreement form and return it to us before your event.</li>
+          <li>A 50% deposit is required to confirm your booking.</li>
+          <li>For DJ hire, the remaining balance is due 7 days before your event.</li>
+          <li>For party hire, the full payment is required at time of collection.</li>
+          <li>If you have any questions, please <a href="/contact">contact us</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="section-sm">
+  <div class="container text-center reveal">
+    <h2 style="margin-bottom:1rem;">Need Help With Your Form?</h2>
+    <p style="color:var(--text-secondary); margin-bottom:2rem;">Our team is here to assist you with any questions.</p>
+    <div class="flex-center gap-2 flex-wrap">
+      <a href="/contact" class="btn btn-primary">Contact Us</a>
+      <a href="tel:0467764778" class="btn btn-outline">
+        <i class="fas fa-phone"></i> 0467 764 778
+      </a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<style>
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.download-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all var(--transition);
+}
+
+.download-card:hover {
+  border-color: rgba(0,212,255,0.3);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.download-icon {
+  width: 80px;
+  width: 12vw;
+  min-width: 60px;
+  max-width: 80px;
+  aspect-ratio: 1;
+  background: rgba(10,125,232,0.1);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-size: 4vw;
+  min-font-size: 1.5rem;
+  max-font-size: 2rem;
+  color: var(--primary);
+}
+
+.download-content {
+  flex: 1;
+}
+
+.download-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.download-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.download-features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.download-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.download-features i {
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+.notes-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.notes-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.notes-card h3 i {
+  margin-right: 0.5rem;
+}
+
+.notes-card ul {
+  list-style: none;
+}
+
+.notes-card li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.notes-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.notes-card a {
+  color: var(--accent);
+}
+
+.notes-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .downloads-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .download-card {
+    flex-direction: column;
+  }
+  
+  .download-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    font-size: 1.5rem;
+  }
+}
+</style>

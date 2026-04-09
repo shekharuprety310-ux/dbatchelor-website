@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="D Batchelor Enterprises - Professional Mobile DJ, MC Services, Audio Hire & Event Management across Tasmania. Based in Hobart.">
+  <meta name="keywords" content="DJ hire Tasmania, mobile DJ Hobart, party hire Tasmania, event management, audio hire, MC services">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="Professional DJ, Audio & Event Hire across Tasmania">
+  <meta property="og:image" content="/images/logo-main.png">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@300;400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/animations.css">
+
+  <link rel="icon" href="/media/logos/dbatchelor-logo-circle.png" type="image/png">
+</head>
+<body class="page-<%= page %>">
+
+  <!-- Musical Instruments Background -->
+  <div class="instruments-overlay">
+    <div class="floating-instrument instrument-1"><i class="fas fa-guitar"></i></div>
+    <div class="floating-instrument instrument-2"><i class="fas fa-drum"></i></div>
+    <div class="floating-instrument instrument-3"><i class="fas fa-music"></i></div>
+    <div class="floating-instrument instrument-4"><i class="fas fa-microphone-alt"></i></div>
+    <div class="floating-instrument instrument-5"><i class="fas fa-headphones"></i></div>
+    <div class="floating-instrument instrument-6"><i class="fas fa-compact-disc"></i></div>
+    <div class="floating-instrument instrument-7"><i class="fas fa-piano-keyboard"></i></div>
+    <div class="floating-instrument instrument-8"><i class="fas fa-volume-up"></i></div>
+    <div class="floating-instrument instrument-9"><i class="fas fa-sliders-h"></i></div>
+    <div class="floating-instrument instrument-10"><i class="fas fa-record-vinyl"></i></div>
+    <div class="floating-instrument instrument-11"><i class="fas fa-guitar"></i></div>
+    <div class="floating-instrument instrument-12"><i class="fas fa-piano-keyboard"></i></div>
+  </div>
+
+  <!-- DJ Equipment Floating -->
+  <div class="dj-equipment-overlay">
+    <div class="dj-equip dj-turntable"><i class="fas fa-circle-notch"></i></div>
+    <div class="dj-equip dj-mixer"><i class="fas fa-sliders-h"></i></div>
+    <div class="dj-equip dj-speaker"><i class="fas fa-volume-up"></i></div>
+    <div class="dj-equip dj-headphones"><i class="fas fa-headphones"></i></div>
+  </div>
+
+  <!-- Audio visualizer canvas (background) -->
+  <canvas id="audioCanvas"></canvas>
+
+  <!-- Particle overlay -->
+  <div id="particles-overlay"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/media/logos/logo-main.png" alt="D Batchelor Enterprises" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-text-main">D Batchelor Enterprises</span>
+          <span class="logo-text-sub">Professional DJ & Event Services</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>">Home</a></li>
+        <li><a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>">About</a></li>
+        <li class="has-dropdown">
+          <a href="/services" class="nav-link <%= page === 'services' ? 'active' : '' %>">Services <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="/services/dj-hire"><i class="fas fa-music"></i> Mobile DJ Hire</a></li>
+            <li><a href="/services/party-hire"><i class="fas fa-star"></i> Party Equipment Hire</a></li>
+            <li><a href="/services#audio"><i class="fas fa-volume-up"></i> Audio & Sound</a></li>
+            <li><a href="/services#lighting"><i class="fas fa-lightbulb"></i> Lighting</a></li>
+            <li><a href="/services#events"><i class="fas fa-calendar-alt"></i> Event Management</a></li>
+          </ul>
+        </li>
+        <li><a href="/our-work" class="nav-link <%= page === 'our-work' ? 'active' : '' %>">Our Work</a></li>
+        <li><a href="/events" class="nav-link <%= page === 'events' ? 'active' : '' %>">Events</a></li>
+        <li><a href="/faq" class="nav-link <%= page === 'faq' ? 'active' : '' %>">FAQ</a></li>
+        <li><a href="/downloads" class="nav-link <%= page === 'downloads' ? 'active' : '' %>">Downloads</a></li>
+        <li><a href="/contact" class="nav-link <%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
+        <li><a href="/booking" class="nav-cta btn-pulse">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>

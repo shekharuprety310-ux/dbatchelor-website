@@ -1,0 +1,502 @@
+<%- include('partials/header') %>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><span>Our Work</span></div>
+      <h1 class="text-gradient">Our Work</h1>
+      <p style="color:var(--text-secondary); max-width:600px; margin: 1rem auto 0; font-size:1.1rem;">
+        A showcase of events we've been honoured to be a part of
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Stats bar -->
+<section class="section-sm" style="background:var(--bg-card); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="work-stats stagger">
+      <div class="work-stat-item">
+        <div class="stat-number counter" data-target="500">0</div>
+        <div class="stat-label">Events Completed</div>
+      </div>
+      <div class="work-stat-item">
+        <div class="stat-number counter" data-target="200">0</div>
+        <div class="stat-label">Weddings & Receptions</div>
+      </div>
+      <div class="work-stat-item">
+        <div class="stat-number counter" data-target="150">0</div>
+        <div class="stat-label">Birthday Parties</div>
+      </div>
+      <div class="work-stat-item">
+        <div class="stat-number counter" data-target="50">0</div>
+        <div class="stat-label">Corporate Events</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio grid -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag"><i class="fas fa-images"></i> Portfolio</span>
+      <h2 class="section-title">Events We've <span class="highlight">Rocked</span></h2>
+      <p class="section-subtitle">From intimate parties to large-scale events — we bring the same passion every time.</p>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="portfolio-filters reveal mb-4">
+      <button class="filter-btn active" data-filter="all">All Events</button>
+      <button class="filter-btn" data-filter="wedding">Weddings</button>
+      <button class="filter-btn" data-filter="birthday">Birthdays</button>
+      <button class="filter-btn" data-filter="corporate">Corporate</button>
+      <button class="filter-btn" data-filter="party">Parties</button>
+      <button class="filter-btn" data-filter="video">Videos</button>
+    </div>
+
+    <!-- Portfolio grid with photos and videos -->
+    <div class="portfolio-grid stagger">
+      <!-- Wedding - Image -->
+      <div class="portfolio-card" data-category="wedding">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_0732.JPEG" alt="Wedding Event" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay">
+            <i class="fas fa-expand"></i>
+          </div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Wedding</span>
+          <h4>Wedding Reception — Hobart</h4>
+          <p>Full DJ, MC & lighting package for 150 guests.</p>
+        </div>
+      </div>
+
+      <!-- Birthday - Image -->
+      <div class="portfolio-card" data-category="birthday">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_1662.JPEG" alt="Birthday Event" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Birthday</span>
+          <h4>50th Birthday Bash — Launceston</h4>
+          <p>Party hire with sound, lighting & smoke machine.</p>
+        </div>
+      </div>
+
+      <!-- Corporate - Image -->
+      <div class="portfolio-card" data-category="corporate">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_1663.JPEG" alt="Corporate Event" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Corporate</span>
+          <h4>Company End of Year — Devonport</h4>
+          <p>Audio setup, background music & MC services.</p>
+        </div>
+      </div>
+
+      <!-- Party - Image -->
+      <div class="portfolio-card" data-category="party">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_1664.JPEG" alt="Party Event" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Party</span>
+          <h4>New Year's Eve Party — Huonville</h4>
+          <p>DJ until midnight, full PA system & dance floor lighting.</p>
+        </div>
+      </div>
+
+      <!-- Wedding 2 - Image -->
+      <div class="portfolio-card" data-category="wedding">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_0848.JPEG" alt="Wedding Event" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Wedding</span>
+          <h4>Ceremony & Reception — Tasman Peninsula</h4>
+          <p>Ceremony PA & full reception DJ services.</p>
+        </div>
+      </div>
+
+      <!-- Birthday 2 - Image -->
+      <div class="portfolio-card" data-category="birthday">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_1307.JPEG" alt="Birthday Event" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Birthday</span>
+          <h4>21st Birthday — Burnie</h4>
+          <p>DJ party hire with wireless microphone & lighting.</p>
+        </div>
+      </div>
+
+      <!-- Video 1 -->
+      <div class="portfolio-card portfolio-video-card" data-category="video">
+        <div class="portfolio-card-img video-card-img">
+          <video poster="/media/events/IMG_0730.MP4" style="width:100%;height:100%;object-fit:cover;">
+            <source src="/media/events/IMG_0730.MP4" type="video/mp4">
+          </video>
+          <div class="video-play-btn">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="video-duration">0:45</div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag"><i class="fas fa-video"></i> Video</span>
+          <h4>DJ Set Highlights</h4>
+          <p>Live DJ performance at a wedding reception.</p>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="portfolio-card portfolio-video-card" data-category="video">
+        <div class="portfolio-card-img video-card-img">
+          <video poster="/media/events/IMG_1667.MP4" style="width:100%;height:100%;object-fit:cover;">
+            <source src="/media/events/IMG_1667.MP4" type="video/mp4">
+          </video>
+          <div class="video-play-btn">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="video-duration">1:30</div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag"><i class="fas fa-video"></i> Video</span>
+          <h4>Party Lighting Show</h4>
+          <p>Lighting effects and crowd energy at a birthday party.</p>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="portfolio-card portfolio-video-card" data-category="video">
+        <div class="portfolio-card-img video-card-img">
+          <video poster="/media/events/IMG_2213.MP4" style="width:100%;height:100%;object-fit:cover;">
+            <source src="/media/events/IMG_2213.MP4" type="video/mp4">
+          </video>
+          <div class="video-play-btn">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="video-duration">2:15</div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag"><i class="fas fa-video"></i> Video</span>
+          <h4>Event Highlights Reel</h4>
+          <p>Compilation of various events and performances.</p>
+        </div>
+      </div>
+
+      <!-- Wedding 3 -->
+      <div class="portfolio-card" data-category="wedding">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_0850.JPEG" alt="Wedding" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Wedding</span>
+          <h4>Wedding DJ — Hobart</h4>
+          <p>First dance & reception celebrations.</p>
+        </div>
+      </div>
+
+      <!-- Birthday 3 -->
+      <div class="portfolio-card" data-category="birthday">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_0949.JPEG" alt="Birthday" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Birthday</span>
+          <h4>Milestone Birthday — Launceston</h4>
+          <p>Full party package with effects lighting.</p>
+        </div>
+      </div>
+
+      <!-- Corporate 2 -->
+      <div class="portfolio-card" data-category="corporate">
+        <div class="portfolio-card-img">
+          <img src="/media/events/IMG_1665.JPEG" alt="Corporate" style="width:100%;height:100%;object-fit:cover;">
+          <div class="portfolio-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="portfolio-card-info">
+          <span class="event-tag">Corporate</span>
+          <h4>Corporate Awards Night — Devonport</h4>
+          <p>Professional PA & MC for award presentations.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media CTA -->
+    <div class="social-cta reveal mt-4">
+      <div class="social-cta-inner">
+        <div class="social-cta-icon">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div>
+          <h3>See More of Our Work</h3>
+          <p>Follow us on Facebook and Instagram for photos and videos from our latest events.</p>
+        </div>
+        <div class="social-cta-buttons">
+          <a href="https://www.facebook.com/Batchelorenterprisestasptyltd/" target="_blank" class="btn btn-primary">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/dbatchelorenterprises/" target="_blank" class="btn btn-outline">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.tiktok.com/@batchelorenterprises" target="_blank" class="btn btn-outline">
+            <i class="fab fa-tiktok"></i> TikTok
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<style>
+.work-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.work-stat-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.portfolio-filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 0.5rem 1.25rem;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--gradient-main);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 15px var(--glow);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.portfolio-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.portfolio-card:hover {
+  border-color: rgba(0,212,255,0.3);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.portfolio-card-img {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.wedding-img { background: linear-gradient(135deg, #2d1a4a, #4a1a6e); }
+.birthday-img { background: linear-gradient(135deg, #1a3a4a, #0a4a8a); }
+.corporate-img { background: linear-gradient(135deg, #0a2a3a, #0a4a5e); }
+.party-img { background: linear-gradient(135deg, #1a2a0a, #0a4a2a); }
+.wedding2-img { background: linear-gradient(135deg, #3a0a1a, #6a0a2e); }
+.birthday2-img { background: linear-gradient(135deg, #3a2a0a, #6a4a0a); }
+
+.event-emoji {
+  font-size: 4rem;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,125,232,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+  font-size: 1.5rem;
+  color: white;
+}
+
+.portfolio-card:hover .portfolio-overlay { opacity: 1; }
+
+.video-card-img {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-card-img video {
+  object-fit: cover;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(10,125,232,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 2;
+  transition: all var(--transition);
+}
+
+.video-card-img:hover .video-play-btn {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--primary);
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.8);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: white;
+  font-family: var(--font-heading);
+}
+
+.portfolio-card-info { padding: 1.25rem 1.5rem; }
+
+.event-tag {
+  display: inline-block;
+  background: rgba(10,125,232,0.15);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+  display: block;
+  width: fit-content;
+}
+
+.portfolio-card-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-card-info p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Social CTA */
+.social-cta-inner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-cta-icon {
+  width: 60px; height: 60px;
+  border-radius: 16px;
+  background: rgba(10,125,232,0.15);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.social-cta-inner h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
+.social-cta-inner p { color: var(--text-secondary); font-size: 0.95rem; }
+.social-cta-inner > div:nth-child(2) { flex: 1; }
+
+.social-cta-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; flex-shrink: 0; }
+
+@media (max-width: 768px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .work-stats { grid-template-columns: repeat(2,1fr); }
+  .social-cta-inner { flex-direction: column; }
+}
+</style>
+
+<script>
+// Portfolio filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+        card.style.opacity = '1';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Video play functionality
+document.querySelectorAll('.portfolio-video-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const video = this.querySelector('video');
+    if (video.paused) {
+      video.play();
+      this.querySelector('.video-play-btn').style.display = 'none';
+    } else {
+      video.pause();
+      this.querySelector('.video-play-btn').style.display = 'flex';
+    }
+  });
+});
+</script>

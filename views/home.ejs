@@ -1,0 +1,1082 @@
+<%- include('partials/header') %>
+
+<!-- ══════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <!-- Animated background elements -->
+  <div class="hero-bg">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+  </div>
+
+  <!-- Music notes floating -->
+  <div class="music-notes-container" id="musicNotes"></div>
+
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for bookings across Tasmania
+      </div>
+
+      <div class="equalizer mb-4" style="justify-content:flex-start;">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line-1">Your Professional</span>
+        <span class="title-line-2 text-gradient" id="typewriterText">DJ Since 2005</span>
+        <span class="title-line-3">Dale Batchelor</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Professional DJ & MC services across Tasmania. Dale Batchelor has been rocking events 
+        since 2005 — weddings, parties, corporate functions, and more. Premium audio hire and full event management.
+      </p>
+
+      <div class="hero-location">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Hobart &bull; Launceston &bull; Devonport &bull; Burnie &bull; All Tasmania</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="/booking" class="btn btn-primary btn-lg btn-pulse">
+          <i class="fas fa-calendar-check"></i> Book Your Event
+        </a>
+        <a href="/services" class="btn btn-outline btn-lg">
+          <i class="fas fa-headphones"></i> Our Services
+        </a>
+      </div>
+
+      <div class="hero-social">
+        <span>Follow us:</span>
+        <a href="https://www.facebook.com/Batchelorenterprisestasptyltd/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/dbatchelorenterprises/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@dbatchelorenterprises" target="_blank" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-logo-wrapper float">
+        <div class="hero-logo-glow"></div>
+        <div class="hero-logo-container">
+          <img src="/media/events/dale-profile.png" alt="Dale Batchelor - Professional DJ" class="hero-logo-img">
+        </div>
+      </div>
+      
+      <!-- Orbiting elements -->
+      <div class="orbit-ring">
+        <div class="orbit-item orbit-1"><i class="fas fa-music"></i></div>
+        <div class="orbit-item orbit-2"><i class="fas fa-microphone"></i></div>
+        <div class="orbit-item orbit-3"><i class="fas fa-compact-disc"></i></div>
+        <div class="orbit-item orbit-4"><i class="fas fa-lightbulb"></i></div>
+      </div>
+
+      <div class="hero-stats-mini">
+        <div class="mini-stat">
+          <span class="mini-num">500+</span>
+          <span class="mini-label">Events</span>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-num">10+</span>
+          <span class="mini-label">Years</span>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-num">5★</span>
+          <span class="mini-label">Rating</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SERVICES PREVIEW
+══════════════════════════════════════════ -->
+<section class="section services-preview">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag"><i class="fas fa-bolt"></i> What We Do</span>
+      <h2 class="section-title">Complete Event <span class="highlight">Entertainment</span></h2>
+      <p class="section-subtitle">Everything you need to make your event spectacular — under one roof.</p>
+    </div>
+
+    <div class="services-grid stagger">
+      <a href="/services/dj-hire" class="service-card">
+        <div class="service-card-img">
+          <img src="/media/events/IMG_0732.JPEG" alt="DJ Hire" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="service-card-icon">
+          <i class="fas fa-compact-disc"></i>
+          <div class="icon-rings"><span></span><span></span></div>
+        </div>
+        <h3>Mobile DJ Hire</h3>
+        <p>Professional DJ services for weddings, parties, corporate events. Custom playlists, premium equipment.</p>
+        <span class="learn-more">Book Now <i class="fas fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/services/dj-hire" class="service-card">
+        <div class="service-card-img">
+          <img src="/media/events/IMG_1662.JPEG" alt="Birthday DJ" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="service-card-icon">
+          <i class="fas fa-microphone-alt"></i>
+          <div class="icon-rings"><span></span><span></span></div>
+        </div>
+        <h3>MC Services</h3>
+        <p>Experienced Master of Ceremonies to guide your event, keep guests engaged and ensure perfect timing.</p>
+        <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/services#audio" class="service-card">
+        <div class="service-card-img">
+          <img src="/media/events/IMG_1663.JPEG" alt="Audio Equipment" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="service-card-icon">
+          <i class="fas fa-volume-up"></i>
+          <div class="icon-rings"><span></span><span></span></div>
+        </div>
+        <h3>Audio & Sound</h3>
+        <p>Premium PA systems, subwoofers, wireless microphones and full sound solutions for any size venue.</p>
+        <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/services#lighting" class="service-card">
+        <div class="service-card-img">
+          <img src="/media/events/IMG_1664.JPEG" alt="Lighting" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="service-card-icon">
+          <i class="fas fa-lightbulb"></i>
+          <div class="icon-rings"><span></span><span></span></div>
+        </div>
+        <h3>Lighting Effects</h3>
+        <p>Dance floor lighting, party effects, smoke machines and ambient lighting to set the perfect mood.</p>
+        <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/services/party-hire" class="service-card">
+        <div class="service-card-img">
+          <img src="/media/events/IMG_1307.JPEG" alt="Party Hire" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="service-card-icon">
+          <i class="fas fa-star"></i>
+          <div class="icon-rings"><span></span><span></span></div>
+        </div>
+        <h3>Party Equipment</h3>
+        <p>Full party hire packages — equipment, staging, setup and pack-down. We handle everything.</p>
+        <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/services#events" class="service-card featured-service">
+        <div class="service-card-img">
+          <img src="/media/events/IMG_0848.JPEG" alt="Event Management" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="service-card-icon">
+          <i class="fas fa-calendar-star"></i>
+          <div class="icon-rings"><span></span><span></span></div>
+        </div>
+        <h3>Event Management</h3>
+        <p>Full event planning and coordination. Weddings, birthdays, corporate — we manage every detail.</p>
+        <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHY CHOOSE US / STATS
+══════════════════════════════════════════ -->
+<section class="section stats-section">
+  <div class="stats-bg-pattern"></div>
+  <div class="container">
+    <div class="stats-grid stagger">
+      <div class="stat-item reveal-scale">
+        <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+        <div class="stat-number counter" data-target="500">0</div>
+        <div class="stat-label">Events Completed</div>
+      </div>
+      <div class="stat-item reveal-scale">
+        <div class="stat-icon"><i class="fas fa-heart"></i></div>
+        <div class="stat-number counter" data-target="200">0</div>
+        <div class="stat-label">Weddings & Celebrations</div>
+      </div>
+      <div class="stat-item reveal-scale">
+        <div class="stat-icon"><i class="fas fa-star"></i></div>
+        <div class="stat-number counter" data-target="100">0</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-item reveal-scale">
+        <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="stat-number">All</div>
+        <div class="stat-label">Tasmania Covered</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     EVENT TYPES
+══════════════════════════════════════════ -->
+<section class="section events-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag"><i class="fas fa-calendar-alt"></i> Events We Cover</span>
+      <h2 class="section-title">We DJ <span class="highlight">Every Occasion</span></h2>
+    </div>
+
+    <div class="events-carousel stagger">
+      <div class="event-type-card">
+        <div class="event-icon">💍</div>
+        <h4>Weddings</h4>
+        <p>Your perfect day deserves perfect music</p>
+      </div>
+      <div class="event-type-card">
+        <div class="event-icon">🎂</div>
+        <h4>Birthdays</h4>
+        <p>Milestone celebrations done right</p>
+      </div>
+      <div class="event-type-card">
+        <div class="event-icon">🏢</div>
+        <h4>Corporate</h4>
+        <p>Professional entertainment for business</p>
+      </div>
+      <div class="event-type-card">
+        <div class="event-icon">🎓</div>
+        <h4>School Formals</h4>
+        <p>Memorable nights for students</p>
+      </div>
+      <div class="event-type-card">
+        <div class="event-icon">🎉</div>
+        <h4>Private Parties</h4>
+        <p>Any occasion, any vibe</p>
+      </div>
+      <div class="event-type-card">
+        <div class="event-icon">🎪</div>
+        <h4>Festivals</h4>
+        <p>Outdoor events and community shows</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ABOUT PREVIEW
+══════════════════════════════════════════ -->
+<section class="section about-preview">
+  <div class="container">
+    <div class="about-preview-grid">
+      <div class="about-preview-visual reveal-left">
+        <div class="map-logo-container">
+          <img src="/images/logo-map.png" alt="D Batchelor Enterprises Tasmania" class="map-logo float">
+          <div class="coverage-badge">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Based in Hobart, TAS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-preview-content reveal-right">
+        <span class="section-tag"><i class="fas fa-info-circle"></i> About Us</span>
+        <h2 class="section-title mt-2">
+          Tasmania's Trusted<br><span class="highlight">Entertainment Partner</span>
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; margin: 1.5rem 0; line-height: 1.8;">
+          D Batchelor Enterprises is a locally-owned and operated entertainment business based in Hobart, Tasmania. 
+          We bring professional-grade DJ, audio, and event services to all corners of the Apple Isle — from the 
+          bustling city to the beautiful Tasman Peninsula.
+        </p>
+        <ul class="about-checklist">
+          <li><i class="fas fa-check-circle"></i> Professional DJ & MC Services</li>
+          <li><i class="fas fa-check-circle"></i> Premium Audio & Lighting Equipment</li>
+          <li><i class="fas fa-check-circle"></i> Full Event Planning & Coordination</li>
+          <li><i class="fas fa-check-circle"></i> Servicing all of Tasmania</li>
+          <li><i class="fas fa-check-circle"></i> ABN: 61 924 754 338</li>
+        </ul>
+        <div class="mt-4 flex gap-2 flex-wrap">
+          <a href="/about" class="btn btn-primary">Learn More About Us</a>
+          <a href="/contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════ -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag"><i class="fas fa-star"></i> Testimonials</span>
+      <h2 class="section-title">What Our <span class="highlight">Clients Say</span></h2>
+    </div>
+
+    <div class="testimonials-grid stagger">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"D Batchelor Enterprises made our wedding absolutely unforgettable. The music was perfect all night and they kept the dance floor packed!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div>
+            <strong>Sarah M.</strong>
+            <span>Wedding Client, Hobart</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Booked for our 40th birthday party. Professional setup, amazing sound quality, and read the crowd perfectly. Will definitely book again!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">J</div>
+          <div>
+            <strong>James K.</strong>
+            <span>Birthday Party, Launceston</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Our corporate event ran perfectly. Cassandra was professional, punctual, and the audio setup was outstanding. Highly recommended!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <strong>Amanda T.</strong>
+            <span>Corporate Event, Devonport</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA BANNER
+══════════════════════════════════════════ -->
+<section class="section-sm cta-banner">
+  <div class="cta-bg-animation"></div>
+  <div class="container">
+    <div class="cta-content reveal">
+      <div class="cta-text">
+        <h2>Ready to Make Your Event <span class="text-gradient">Unforgettable?</span></h2>
+        <p>Contact us today to discuss your event. Based in Hobart — serving all of Tasmania.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="/booking" class="btn btn-primary btn-lg btn-pulse">
+          <i class="fas fa-calendar-plus"></i> Book Now
+        </a>
+        <a href="tel:0467764778" class="btn btn-outline btn-lg">
+          <i class="fas fa-phone"></i> 0467 764 778
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<style>
+/* ── HOME PAGE SPECIFIC STYLES ── */
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 130px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+}
+
+.orb-1 {
+  width: 50vw; height: 50vw;
+  max-width: 600px; max-height: 600px;
+  background: radial-gradient(circle, #0a7de8 0%, transparent 70%);
+  top: -200px; left: -200px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 35vw; height: 35vw;
+  max-width: 400px; max-height: 400px;
+  background: radial-gradient(circle, #00d4ff 0%, transparent 70%);
+  bottom: -100px; right: -100px;
+  animation: float 10s ease-in-out infinite 2s;
+}
+
+.orb-3 {
+  width: 25vw; height: 25vw;
+  max-width: 300px; max-height: 300px;
+  background: radial-gradient(circle, #1a4a9e 0%, transparent 70%);
+  top: 50%; right: 20%;
+  animation: float 7s ease-in-out infinite 1s;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.hero-content {
+  animation: slide-in-left 0.9s ease forwards;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7vw, 7.5rem);
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 0 0 80px rgba(94, 179, 255, 0.6);
+}
+
+.title-line-1 { color: var(--text-secondary); font-size: 0.7em; }
+.title-line-2 { 
+  font-size: 1em;
+  background: linear-gradient(135deg, #5eb3ff, #33eaff, #7ac4ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+.title-line-3 { color: var(--text-secondary); font-size: 0.6em; }
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  max-width: 520px;
+}
+
+.hero-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.hero-location i { color: #ff4d4d; }
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.05rem;
+}
+
+.hero-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: var(--font-heading);
+}
+
+.hero-social a {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: all var(--transition);
+}
+
+.hero-social a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Hero Visual */
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: slide-in-right 0.9s ease forwards;
+}
+
+.hero-logo-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo-glow {
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(10,125,232,0.3) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.hero-logo-container {
+  background: transparent;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 100px rgba(10, 125, 232, 0.6), 0 0 60px rgba(0, 212, 255, 0.4);
+  border: 4px solid rgba(10, 125, 232, 0.5);
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.hero-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50%;
+  background: transparent;
+  transition: all var(--transition);
+}
+
+.hero-logo-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 120px rgba(10, 125, 232, 0.7), 0 0 80px rgba(0, 212, 255, 0.5);
+}
+
+.hero-logo-img {
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(10, 125, 232, 0.7));
+  transition: all var(--transition);
+}
+
+.orbit-ring {
+  position: absolute;
+  width: 90%;
+  max-width: 420px;
+  aspect-ratio: 1;
+  border: 1px dashed rgba(0,212,255,0.2);
+  border-radius: 50%;
+}
+
+.orbit-item {
+  position: absolute;
+  width: 3rem; height: 3rem;
+  width: 5vw; height: 5vw;
+  min-width: 40px; min-height: 40px;
+  max-width: 44px; max-height: 44px;
+  border-radius: 50%;
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1rem;
+  font-size: 2vw;
+  min-font-size: 0.9rem;
+  max-font-size: 1.1rem;
+  box-shadow: 0 4px 15px var(--glow);
+}
+
+.orbit-1 { top: -22px; left: 50%; transform: translateX(-50%); animation: orbit 10s linear infinite; }
+.orbit-2 { right: -22px; top: 50%; transform: translateY(-50%); animation: orbit 10s linear infinite 2.5s; }
+.orbit-3 { bottom: -22px; left: 50%; transform: translateX(-50%); animation: orbit 10s linear infinite 5s; }
+.orbit-4 { left: -22px; top: 50%; transform: translateY(-50%); animation: orbit 10s linear infinite 7.5s; }
+
+.hero-stats-mini {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.5rem;
+  background: rgba(13,22,40,0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 0.85rem 2rem;
+}
+
+.mini-stat { text-align: center; }
+.mini-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--accent);
+  display: block;
+}
+.mini-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Scroll indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  animation: fade-in 1s ease 1.5s both;
+}
+
+.scroll-mouse {
+  width: 24px; height: 38px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.scroll-wheel {
+  width: 4px; height: 8px;
+  background: var(--accent);
+  border-radius: 2px;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Services grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+  display: block;
+  color: inherit;
+}
+
+.service-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 0;
+  transition: opacity var(--transition);
+}
+
+.service-card:hover .service-card-img {
+  opacity: 0.25;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,125,232,0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.service-card:hover::before { opacity: 1; }
+
+.service-card:hover {
+  border-color: rgba(0,212,255,0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(10,125,232,0.25);
+  color: inherit;
+}
+
+.service-card-icon {
+  position: relative;
+  width: 64px; height: 64px;
+  background: rgba(10,125,232,0.1);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+  transition: all var(--transition);
+}
+
+.service-card:hover .service-card-icon {
+  background: rgba(10,125,232,0.2);
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.icon-rings span {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0,212,255,0.2);
+  animation: glow-rotate 4s linear infinite;
+}
+
+.icon-rings span:nth-child(1) { inset: -8px; }
+.icon-rings span:nth-child(2) { inset: -16px; animation-direction: reverse; animation-duration: 6s; }
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading);
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.learn-more {
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap var(--transition);
+}
+
+.service-card:hover .learn-more { gap: 0.75rem; }
+
+.featured-service {
+  background: linear-gradient(135deg, rgba(10,125,232,0.15) 0%, rgba(0,212,255,0.08) 100%);
+  border-color: rgba(10,125,232,0.3);
+}
+
+/* Stats section */
+.stats-section {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(10,125,232,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+  border-right: 1px solid var(--border);
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Events section */
+.events-carousel {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.event-type-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1rem;
+  text-align: center;
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.event-type-card:hover {
+  border-color: rgba(0,212,255,0.4);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.event-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.event-type-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-heading);
+}
+
+.event-type-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* About preview */
+.about-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.map-logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.map-logo { width: 100%; max-width: 480px; }
+
+.coverage-badge {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-family: var(--font-heading);
+  white-space: nowrap;
+}
+
+.coverage-badge i { color: #ff4d4d; }
+
+.about-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.about-checklist i { color: var(--primary); font-size: 1.1rem; }
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: all var(--transition);
+}
+
+.testimonial-card:hover {
+  border-color: rgba(0,212,255,0.3);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.testimonial-card p {
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.author-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--gradient-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.testimonial-author strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+}
+
+.testimonial-author span {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* CTA Banner */
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-bg-animation {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,125,232,0.15) 0%, rgba(0,212,255,0.08) 50%, rgba(10,125,232,0.15) 100%);
+  background-size: 200% 200%;
+  animation: shimmer 4s linear infinite;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cta-text h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin-bottom: 0.5rem;
+}
+
+.cta-text p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .events-carousel { grid-template-columns: repeat(3, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  .hero-actions { justify-content: center; }
+  .hero-social { justify-content: center; }
+  .hero-visual { display: none; }
+  .hero-location { justify-content: center; }
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .about-preview-grid { grid-template-columns: 1fr; }
+  .cta-content { flex-direction: column; text-align: center; }
+  .events-carousel { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+}
+</style>
