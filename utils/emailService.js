@@ -24,9 +24,13 @@ const sendContactNotification = async (formData) => {
   const transporter = createTransporter();
   if (!transporter) return;
   
+  // Support multiple emails (comma separated)
+  const emailTo = process.env.EMAIL_TO || process.env.EMAIL_USER;
+  const recipients = emailTo.split(',').map(e => e.trim());
+  
   const mailOptions = {
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
-    to: process.env.EMAIL_TO || process.env.EMAIL_USER,
+    to: recipients,
     subject: `📞 New Contact Form - ${formData.name}`,
     html: `
       <h2 style="color: #5eb3ff;">New Contact Form Submission</h2>
@@ -54,9 +58,13 @@ const sendBookingNotification = async (formData) => {
   const transporter = createTransporter();
   if (!transporter) return;
   
+  // Support multiple emails (comma separated)
+  const emailTo = process.env.EMAIL_TO || process.env.EMAIL_USER;
+  const recipients = emailTo.split(',').map(e => e.trim());
+  
   const mailOptions = {
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
-    to: process.env.EMAIL_TO || process.env.EMAIL_USER,
+    to: recipients,
     subject: `🎉 New Booking Request - ${formData.name} - ${formData.eventType}`,
     html: `
       <h2 style="color: #5eb3ff;">New Booking Request</h2>
