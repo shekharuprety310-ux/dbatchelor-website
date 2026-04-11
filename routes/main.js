@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const validator = require('validator');
+const { sendContactNotification, sendBookingNotification } = require('../utils/emailService');
 
 // Home
 router.get('/', (req, res) => {
@@ -100,6 +101,9 @@ router.post('/contact',
     console.log('Service:', service);
     console.log('Message:', message);
     console.log('===================================================');
+    
+    // Send email notification
+    sendContactNotification({ name, email, phone, service, message });
 
     res.render('contact', {
       title: 'Contact Us | D Batchelor Enterprises',
@@ -158,6 +162,9 @@ router.post('/booking',
     console.log('Duration:', hours, 'hours');
     console.log('Notes:', notes || 'None');
     console.log('==========================================');
+    
+    // Send email notification
+    sendBookingNotification({ name, email, phone, eventType, eventDate, venue, guests, service, hours, notes });
 
     res.render('booking', {
       title: 'Book Now | D Batchelor Enterprises',
