@@ -23,17 +23,18 @@ const createTransporter = () => {
       user: emailUser,
       pass: emailPass
     },
-    connectionTimeout: 10000, // 10 seconds
-    timeout: 15000 // 15 seconds
+    connectionTimeout: 10000,
+    timeout: 15000
   });
   
-  // Verify connection
-  try {
-    await transporter.verify();
-    console.log('✅ SMTP Connection verified!');
-  } catch (err) {
-    console.log('❌ SMTP connection failed:', err.message);
-  }
+  // Test connection without await (don't block)
+  transporter.verify((error, success) => {
+    if (error) {
+      console.log('❌ SMTP connection failed:', error.message);
+    } else {
+      console.log('✅ SMTP connection verified!');
+    }
+  });
   
   return transporter;
 };
