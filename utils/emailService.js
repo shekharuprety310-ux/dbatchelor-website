@@ -102,13 +102,18 @@ const sendViaResend = async (formData, type = 'contact') => {
 const sendContactNotification = async (formData) => {
   console.log('Attempting to send contact email...');
   
-  // Try Resend first if API key exists
-  if (process.env.EMAIL_API_KEY) {
+  // Check for Resend API key FIRST
+  const apiKey = process.env.EMAIL_API_KEY;
+  console.log('Resend API Key:', apiKey ? 'SET (length: ' + apiKey.length + ')' : 'NOT SET');
+  
+  if (apiKey) {
+    console.log('Trying Resend API...');
     await sendViaResend(formData, 'contact');
     return;
   }
   
-  // Fallback to SMTP
+  // Fallback to SMTP - will likely fail on Railway
+  console.log('No API key - falling back to SMTP (will probably fail on Railway)');
   const transporter = createTransporter();
   if (!transporter) return;
   
@@ -141,8 +146,11 @@ const sendContactNotification = async (formData) => {
 const sendBookingNotification = async (formData) => {
   console.log('Attempting to send booking email...');
   
-  // Try Resend first if API key exists
-  if (process.env.EMAIL_API_KEY) {
+  // Check for Resend API key FIRST
+  const apiKey = process.env.EMAIL_API_KEY;
+  
+  if (apiKey) {
+    console.log('Trying Resend API for booking...');
     await sendViaResend(formData, 'booking');
     return;
   }
