@@ -62,10 +62,13 @@ const sendContactNotification = async (formData) => {
   
   try {
     const info = await transporter.sendMail(mailOptions);
-    console.log('✅ Contact form email sent! Message ID:', info.messageId);
+    console.log('✅ Email sent! Message ID:', info.messageId);
+    console.log('Email sent to:', recipients.join(', '));
   } catch (error) {
-    console.log('❌ Email sending failed:', error.message);
+    console.log('❌ Email sending failed!');
+    console.log('Error:', error.message);
     console.log('Error code:', error.code);
+    console.log('Error response:', error.response);
   }
 };
 
@@ -112,9 +115,12 @@ const sendBookingNotification = async (formData) => {
   try {
     const info = await transporter.sendMail(mailOptions);
     console.log('✅ Booking email sent! Message ID:', info.messageId);
+    console.log('Booking email sent to:', recipients.join(', '));
   } catch (error) {
-    console.log('❌ Booking email failed:', error.message);
+    console.log('❌ Booking email failed!');
+    console.log('Error:', error.message);
     console.log('Error code:', error.code);
+    console.log('Error response:', error.response);
   }
 };
 
