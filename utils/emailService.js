@@ -14,7 +14,10 @@ const sendContactNotification = async (formData) => {
   }
   
   const emailTo = process.env.EMAIL_TO || process.env.EMAIL_USER;
-  const recipients = emailTo.split(',').map(e => e.trim());
+  // Filter out invalid emails - must contain @ and .
+  const recipients = emailTo.split(',')
+    .map(e => e.trim())
+    .filter(e => e && e.includes('@') && e.includes('.'));
   
   console.log('Sending to:', recipients);
   
@@ -55,7 +58,10 @@ const sendBookingNotification = async (formData) => {
   }
   
   const emailTo = process.env.EMAIL_TO || process.env.EMAIL_USER;
-  const recipients = emailTo.split(',').map(e => e.trim());
+  // Filter out invalid emails - must contain @ and .
+  const recipients = emailTo.split(',')
+    .map(e => e.trim())
+    .filter(e => e && e.includes('@') && e.includes('.'));
   
   console.log('Sending to:', recipients);
   
