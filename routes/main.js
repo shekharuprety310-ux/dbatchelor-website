@@ -103,11 +103,9 @@ router.post('/contact',
     console.log('===================================================');
     
     // Send email notification (async - don't wait)
-    try {
-      await sendContactNotification({ name, email, phone, service, message });
-    } catch (err) {
+    sendContactNotification({ name, email, phone, service, message }).catch(err => {
       console.log('Email error:', err.message);
-    }
+    });
 
     res.render('contact', {
       title: 'Contact Us | D Batchelor Enterprises',
@@ -168,7 +166,9 @@ router.post('/booking',
     console.log('==========================================');
     
     // Send email notification
-    sendBookingNotification({ name, email, phone, eventType, eventDate, venue, guests, service, hours, notes });
+    sendBookingNotification({ name, email, phone, eventType, eventDate, venue, guests, service, hours, notes }).catch(err => {
+      console.log('Booking email error:', err.message);
+    });
 
     res.render('booking', {
       title: 'Book Now | D Batchelor Enterprises',
