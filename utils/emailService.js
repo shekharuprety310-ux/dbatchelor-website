@@ -15,17 +15,20 @@ const createTransporter = () => {
   
   console.log('Creating email transporter with:', emailUser);
   
+  // Try different SMTP configuration for Gmail
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
+    port: 465,
+    secure: true, // Use SSL
     auth: {
       user: emailUser,
       pass: emailPass
     },
-    connectionTimeout: 10000,
-    timeout: 15000
+    connectionTimeout: 15000,
+    timeout: 30000
   });
+  
+  console.log('Trying SMTP port 465 (SSL)...');
   
   // Test connection without await (don't block)
   transporter.verify((error, success) => {
