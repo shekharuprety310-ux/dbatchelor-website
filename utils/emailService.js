@@ -1,17 +1,22 @@
 const nodemailer = require('nodemailer');
 
 // Create transporter for sending emails
-// For Gmail, you'll need an App Password (not your regular password)
-// For other services, configure accordingly
+// For Gmail, you need an App Password (not your regular password)
 const createTransporter = () => {
   // Check if email credentials are configured
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
     console.log('⚠️ Email not configured - Form submissions will only show in console');
+    console.log('EMAIL_USER:', process.env.EMAIL_USER);
+    console.log('EMAIL_PASS set:', !!process.env.EMAIL_PASS);
     return null;
   }
   
+  console.log('Creating email transporter with:', process.env.EMAIL_USER);
+  
   return nodemailer.createTransport({
-    service: 'gmail', // or use 'smtp.mailtrap.io' for testing
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // true for 465, false for 587
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS

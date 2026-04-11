@@ -102,8 +102,12 @@ router.post('/contact',
     console.log('Message:', message);
     console.log('===================================================');
     
-    // Send email notification
-    sendContactNotification({ name, email, phone, service, message });
+    // Send email notification (async - don't wait)
+    try {
+      await sendContactNotification({ name, email, phone, service, message });
+    } catch (err) {
+      console.log('Email error:', err.message);
+    }
 
     res.render('contact', {
       title: 'Contact Us | D Batchelor Enterprises',
