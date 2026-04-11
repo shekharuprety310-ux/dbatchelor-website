@@ -1,37 +1,47 @@
 const nodemailer = require('nodemailer');
 
 // Create transporter for sending emails
-// For Gmail, you need an App Password (not your regular password)
 const createTransporter = () => {
+  const emailUser = process.env.EMAIL_USER;
+  const emailPass = process.env.EMAIL_PASS;
+  
   // Check if email credentials are configured
-  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+  if (!emailUser || !emailPass) {
     console.log('⚠️ Email not configured - Form submissions will only show in console');
-    console.log('EMAIL_USER:', process.env.EMAIL_USER);
-    console.log('EMAIL_PASS set:', !!process.env.EMAIL_PASS);
+    console.log('EMAIL_USER:', emailUser ? 'SET' : 'NOT SET');
+    console.log('EMAIL_PASS:', emailPass ? 'SET' : 'NOT SET');
     return null;
   }
   
-  console.log('Creating email transporter with:', process.env.EMAIL_USER);
+  console.log('Creating email transporter with:', emailUser);
   
-  return nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
-    secure: false, // true for 465, false for 587
+    secure: false,
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS
+      user: emailUser,
+      pass: emailPass
     }
   });
+  
+  return transporter;
 };
 
 // Send notification email when contact form is submitted
 const sendContactNotification = async (formData) => {
+  console.log('Attempting to send contact email...');
   const transporter = createTransporter();
-  if (!transporter) return;
+  if (!transporter) {
+    console.log('No transporter - skipping email');
+    return;
+  }
   
   // Support multiple emails (comma separated)
   const emailTo = process.env.EMAIL_TO || process.env.EMAIL_USER;
   const recipients = emailTo.split(',').map(e => e.trim());
+  
+  console.log('Sending to:', recipients);
   
   const mailOptions = {
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
@@ -51,21 +61,28 @@ const sendContactNotification = async (formData) => {
   };
   
   try {
-    await transporter.sendMail(mailOptions);
-    console.log('✅ Contact form notification email sent');
+    const info = await transporter.sendMail(mailOptions);
+    console.log('✅ Contact form email sent! Message ID:', info.messageId);
   } catch (error) {
     console.log('❌ Email sending failed:', error.message);
+    console.log('Error code:', error.code);
   }
 };
 
 // Send notification email when booking form is submitted
 const sendBookingNotification = async (formData) => {
+  console.log('Attempting to send booking email...');
   const transporter = createTransporter();
-  if (!transporter) return;
+  if (!transporter) {
+    console.log('No transporter - skipping email');
+    return;
+  }
   
   // Support multiple emails (comma separated)
   const emailTo = process.env.EMAIL_TO || process.env.EMAIL_USER;
   const recipients = emailTo.split(',').map(e => e.trim());
+  
+  console.log('Sending to:', recipients);
   
   const mailOptions = {
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
@@ -93,10 +110,11 @@ const sendBookingNotification = async (formData) => {
   };
   
   try {
-    await transporter.sendMail(mailOptions);
-    console.log('✅ Booking notification email sent');
+    const info = await transporter.sendMail(mailOptions);
+    console.log('✅ Booking email sent! Message ID:', info.messageId);
   } catch (error) {
-    console.log('❌ Email sending failed:', error.message);
+    console.log('❌ Booking email failed:', error.message);
+    console.log('Error code:', error.code);
   }
 };
 
