@@ -71,10 +71,11 @@ const sendBookingNotification = async (formData) => {
       <h3>Event Details</h3>
       <p><strong>Event Type:</strong> ${formData.eventType}</p>
       <p><strong>Event Date:</strong> ${formData.eventDate}</p>
+      <p><strong>Start Time:</strong> ${formData.startTime || 'Not specified'}</p>
+      <p><strong>Finish Time:</strong> ${formData.finishTime || 'Not specified'}</p>
       <p><strong>Venue:</strong> ${formData.venue}</p>
       <p><strong>Guests:</strong> ${formData.guests}</p>
-      <p><strong>Service:</strong> ${formData.service}</p>
-      <p><strong>Duration:</strong> ${formData.hours} hours</p>
+      <p><strong>Services:</strong> ${Array.isArray(formData.services) ? formData.services.join(', ') : formData.services || 'Not specified'}</p>
       <p><strong>Notes:</strong> ${formData.notes || 'None'}</p>
       <hr>
       <p style="color: #666; font-size: 12px;">Sent from D Batchelor Enterprises Website</p>`

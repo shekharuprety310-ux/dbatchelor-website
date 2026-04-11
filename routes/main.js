@@ -135,8 +135,6 @@ router.post('/booking',
     body('eventDate').trim().notEmpty().withMessage('Event date is required'),
     body('venue').trim().notEmpty().withMessage('Venue/location is required'),
     body('guests').trim().notEmpty().withMessage('Number of guests is required'),
-    body('service').trim().notEmpty().withMessage('Please select a service'),
-    body('hours').trim().notEmpty().withMessage('Duration is required'),
   ],
   (req, res) => {
     const errors = validationResult(req);
@@ -150,7 +148,7 @@ router.post('/booking',
       });
     }
 
-    const { name, email, phone, eventType, eventDate, venue, guests, service, hours, notes } = req.body;
+    const { name, email, phone, eventType, eventDate, venue, guests, notes, startTime, finishTime, services } = req.body;
     
     console.log('========== NEW BOOKING REQUEST ==========');
     console.log('Name:', name);
@@ -158,15 +156,16 @@ router.post('/booking',
     console.log('Phone:', phone);
     console.log('Event Type:', eventType);
     console.log('Event Date:', eventDate);
+    console.log('Start Time:', startTime);
+    console.log('Finish Time:', finishTime);
     console.log('Venue:', venue);
     console.log('Guests:', guests);
-    console.log('Service:', service);
-    console.log('Duration:', hours, 'hours');
+    console.log('Services:', services);
     console.log('Notes:', notes || 'None');
     console.log('==========================================');
     
     // Send email notification
-    sendBookingNotification({ name, email, phone, eventType, eventDate, venue, guests, service, hours, notes }).catch(err => {
+    sendBookingNotification({ name, email, phone, eventType, eventDate, venue, guests, startTime, finishTime, services, notes }).catch(err => {
       console.log('Booking email error:', err.message);
     });
 
