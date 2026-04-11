@@ -4,8 +4,6 @@ const nodemailer = require('nodemailer');
 const createTransporter = () => {
   const emailUser = process.env.EMAIL_USER;
   const emailPass = process.env.EMAIL_PASS;
-  const emailHost = process.env.EMAIL_HOST || 'smtp.sendgrid.net';
-  const emailPort = process.env.EMAIL_PORT || 587;
   
   if (!emailUser || !emailPass) {
     console.log('⚠️ Email not configured');
@@ -13,26 +11,17 @@ const createTransporter = () => {
   }
   
   console.log('Creating email transporter with:', emailUser);
-  console.log('SMTP Host:', emailHost);
   
   const transporter = nodemailer.createTransport({
-    host: emailHost,
-    port: parseInt(emailPort),
-    secure: false, // true for 465, false for 587
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
     auth: {
       user: emailUser,
       pass: emailPass
     },
     connectionTimeout: 15000,
     timeout: 30000
-  });
-  
-  transporter.verify((error, success) => {
-    if (error) {
-      console.log('❌ SMTP connection failed:', error.message);
-    } else {
-      console.log('✅ SMTP connection verified!');
-    }
   });
   
   return transporter;
